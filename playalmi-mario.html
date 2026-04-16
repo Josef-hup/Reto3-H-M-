@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Mario 2D – PlayAlmi</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="js/animation.js" defer></script>
+</head>
+  <body>
+
+    <!-- NAV -->
+    <nav>
+      <span class="nav-logo">🍄 PlayAlmi</span>
+      <ul class="nav-links">
+        <li><a href="#features">Juego</a></li>
+        <li><a href="#scores">Ranking</a></li>
+        <li><a href="#register">Registro</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+      <div class="cloud c3"></div>
+
+      <div class="mario-sprite">🍄</div>
+      <h1 class="hero-title">SUPER MARIO 2D</h1>
+      <p class="hero-sub">by InformatikAlmi · PlayAlmi Project</p>
+
+      <div class="btn-group">
+        <a href="#" class="btn btn-red">▶ JUGAR AHORA</a>
+        <a href="#scores" class="btn btn-blue">🏆 RANKING</a>
+        <a href="#register" class="btn btn-yellow">👤 REGISTRO</a>
+      </div>  
+
+    </section>
+
+      <!-- INFO SOBRE EMPRESA  -->
+    <section class="info-section">
+  <h2 class="section-title reveal">¿QUÉ ES PLAYALMI?</h2>
+  <div class="section-line reveal"></div>
+
+  <div class="info-row box reveal">
+    <div class="info-text-block">
+
+      <p class="info-text">
+        PlayAlmi es el proyecto de desarrollo de videojuegos del CPES ALMI BHIP en Bilbao. Nuestro objetivo es crear experiencias de juego únicas y emocionantes, combinando creatividad, tecnología y pasión por los videojuegos.
+      </p>
+      
+    </div>
+    <div class="info-img-block">
+      <img src="img/foto-compania.jpeg" alt="Equipo" class="info-img">
+    </div>
+  </div>
+
+  <div class="info-row box reveal">
+    <div class="info-text-block">
+
+      <p class="info-text">
+        Con Super Mario 2D, hemos querido rendir homenaje a un clásico del gaming mientras incorporamos nuestras propias innovaciones para ofrecer una experiencia fresca y divertida. ¡Únete a la diversión y compite en nuestro ranking!
+      </p>
+
+    </div>
+    <div class="info-img-block">
+      <img src="img/foto-compania.jpeg" alt="Desarrollo" class="info-img">
+    </div>
+  </div>
+
+</section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section class="features" id="features">
+
+      <h2 class="section-title reveal">CARACTERÍSTICAS DEL JUEGO</h2>
+      <div class="section-line reveal"></div>
+
+      <div class="cards">
+        <div class="card reveal">
+          <span class="card-icon">❤️</span>
+          <h3>SISTEMA DE VIDAS</h3>
+          <p>Gestión completa de vidas con comodines. Cada colisión con un enemigo te cuesta una vida.</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">⭐</span>
+          <h3>PUNTUACIONES</h3>
+          <p>Sistema de puntuación avanzado guardado en la base de datos. Compite por el primer puesto del ranking.</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">🌍</span>
+          <h3>MULTI-NIVEL</h3>
+          <p>Distintos niveles de dificultad que afectan a la puntuación final. ¿Hasta dónde llegas?</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">🎵</span>
+          <h3>SONIDO Y MÚSICA</h3>
+          <p>Banda sonora y efectos de sonido para una experiencia de juego inmersiva al 100%.</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">🖥️</span>
+          <h3>HECHO EN UNITY</h3>
+          <p>Desarrollado en Unity 2D con colisiones, animaciones fluidas y un motor de físicas real.</p>
+        </div>
+
+        <div class="card reveal">
+          <span class="card-icon">☁️</span>
+          <h3>EN LA NUBE</h3>
+          <p>Web desplegada en cloud conectada a repositorio. Tus datos siempre disponibles desde cualquier lugar.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RANKING -->
+    <section class="scores-section" id="scores">
+      <h2 class="section-title reveal">🏆 RANKING GLOBAL</h2>
+      <div class="section-line reveal"></div>
+
+      <table class="scores-table reveal">
+
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>JUGADOR</th>
+            <th>PUNTUACIÓN</th>
+            <th>NIVEL</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td><span class="medal">🥇</span>1</td>
+            <td>MarioMaster</td>
+            <td>98,450</td>
+            <td>Difícil</td>
+          </tr>
+
+          <tr>
+            <td><span class="medal">🥈</span>2</td>
+            <td>LuigiPro</td>
+            <td>87,200</td>
+            <td>Difícil</td>
+          </tr>
+
+          <tr>
+            <td><span class="medal">🥉</span>3</td>
+            <td>PeachFan99</td>
+            <td>74,800</td>
+            <td>Normal</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Bowser_Jr</td>
+            <td>61,100</td>
+            <td>Normal</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>ToadRunner</td>
+            <td>52,400</td>
+            <td>Fácil</td>
+          </tr>
+  
+        </tbody>
+      </table>
+
+      <p style="text-align:center; margin-top:24px; font-size:12px; color:#aac4e8;">
+        Datos cargados desde el servicio web en tiempo real
+      </p>
+
+    </section>
+
+    <!-- REGISTRO -->
+    <section class="register" id="register">
+
+      <h2 class="section-title reveal">👤 CREAR CUENTA</h2>
+      <div class="section-line reveal"></div>
+
+      <div class="form-box reveal">
+        <div class="avatar-preview" title="Haz clic para cambiar avatar">🎮</div>
+        <div class="form-group">
+          <label>NOMBRE DE USUARIO</label>
+          <input type="text" id="username" placeholder="MarioPlayer123" />
+        </div>
+
+        <div class="form-group">
+          <label>CORREO ELECTRÓNICO</label>
+          <input type="email" id="email" placeholder="mario@playalmi.eus" />
+        </div>
+
+        <div class="form-group">
+          <label>CONTRASEÑA</label>
+          <input type="password" id="password" placeholder="••••••••" />
+        </div>
+
+        <button class="btn btn-green" onclick="handleRegister()" style="width:100%;background:#43b047;color:#fff;font-size:10px;padding:16px;">
+          ✅ REGISTRARSE
+        </button>
+        
+        <p id="form-msg" style="text-align:center; margin-top:16px; font-size:13px; min-height:20px;"></p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 InformatikAlmi · PlayAlmi · CPES ALMI BHIP · Bilbao</p>
+      <p>Hecho con <span>❤️</span> por el equipo DAM 1º</p>
+      <p style="margin-top:12px;">🍄 &nbsp; ⭐ &nbsp; 🌿 &nbsp; 🏆 &nbsp; 🎮</p>
+    </footer>
+  </body>
+</html>

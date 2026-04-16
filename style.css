@@ -1,0 +1,618 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: 'Nunito', sans-serif;
+    background: #f4d092;
+    color: #3e2a14;
+    overflow-x: hidden;
+}
+
+/* ─── PIXEL FONT HELPER ─── */
+.pixel 
+{
+    font-family: 'Press Start 2P', monospace;
+}
+
+/* ─── NAV ─── */
+nav 
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #5d2e0a;
+    border-bottom: 3px solid #b05e3c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+}
+
+.nav-logo 
+{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #f4d092;
+    letter-spacing: 1px;
+}
+
+.nav-links 
+{
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a 
+{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.nav-links a:hover 
+{
+    color: #f4d092;
+}
+
+/* ─── HERO ─── */
+.hero 
+{
+    min-height: 70vh;
+    background: #87ceeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ─── CLOUDS ─── */
+.cloud 
+{
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: drift linear infinite;
+}
+
+.cloud::before,
+.cloud::after 
+{
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.c1 
+{
+    width: 90px;
+    height: 40px;
+    top: 30%;
+    left: -110px;
+    animation-duration: 28s;
+}
+
+.c1::before 
+{
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 15px;
+}
+
+.c1::after 
+{
+    width: 35px;
+    height: 35px;
+    top: -18px;
+    left: 45px;
+}
+
+.c2 
+{
+    width: 60px;
+    height: 28px;
+    top: 40%;
+    left: -80px;
+    animation-duration: 20s;
+    animation-delay: -8s;
+}
+
+.c2::before 
+{
+    width: 36px;
+    height: 36px;
+    top: -18px;
+    left: 10px;
+}
+
+.c2::after 
+{
+    width: 24px;
+    height: 24px;
+    top: -12px;
+    left: 32px;
+}
+
+.c3 
+{
+    width: 110px;
+    height: 46px;
+    top: 30%;
+    left: -140px;
+    animation-duration: 35s;
+    animation-delay: -15s;
+}
+
+.c3::before 
+{
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 18px;
+}
+
+.c3::after 
+{
+    width: 42px;
+    height: 42px;
+    top: -22px;
+    left: 58px;
+}
+
+@keyframes drift 
+{
+    to 
+    {
+        transform: translateX(120vw);
+    }
+}
+
+/* ─── MARIO SPRITE ─── */
+.mario-sprite 
+{
+    animation: marioJump 1.8s ease-in-out infinite;
+    margin-bottom: 24px;
+    font-size: 72px;
+}
+
+@keyframes marioJump 
+{
+    0%, 100% 
+    {
+        transform: translateY(0);
+    }
+    50% 
+    {
+        transform: translateY(-30px);
+    }
+}
+
+.hero-title 
+{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 48px;
+    color: #5d2e0a;
+    text-shadow: 4px 4px 0 #b05e3c;
+    margin-bottom: 16px;
+    animation: titleBounce .6s ease-in-out infinite alternate;
+}
+
+@keyframes titleBounce 
+{
+    to 
+    {
+        text-shadow: 6px 6px 0 #b05e3c;
+    }
+}
+
+.hero-sub 
+{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #3e2a14;
+    margin-bottom: 40px;
+    line-height: 2;
+}
+
+/* ─── BUTTONS ─── */
+.btn-group 
+{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn 
+{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px 0 #3e2a14;
+}
+
+.btn:active 
+{
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 #3e2a14;
+}
+
+.btn-red 
+{
+    background: #b05e3c;
+    color: #ffffff;
+}
+
+.btn-blue 
+{
+    background: white;
+    color: #5d2e0a;
+}
+
+.btn-yellow 
+{
+    background: #ffd700;
+    color: #5d2e0a;
+}
+
+/* ─── EMPRESA INFO ─── */
+.info-section 
+{
+    background: #f4d092;
+    padding: 100px 5%;
+    width: 100%;
+}
+
+.info-row 
+{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 80px;
+}
+
+.info-row:last-of-type 
+{ 
+    margin-bottom: 0; 
+}
+
+.info-text-block, 
+.info-img-block 
+{
+    flex: 1;
+}
+
+.info-row:nth-of-type(even) 
+{
+    flex-direction: row-reverse;
+}
+
+.info-text 
+{
+    font-size: 20px;
+    line-height: 1.8;
+    color: #3e2a14;
+}
+
+.info-img 
+{
+    width: 100%;
+    height: auto;
+    border: 6px solid #5d2e0a;
+    border-radius: 20px;
+    display: block;
+}
+
+@media (max-width: 900px) 
+{
+    .info-row, 
+    .info-row:nth-of-type(even) 
+    {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .info-text 
+    {
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+/* ─── GROUND DECORATION ─── */
+.ground-deco 
+{
+    display: flex;
+    gap: 4px;
+    margin-top: 60px;
+    font-size: 32px;
+}
+
+/* ─── SECTION SHARED ─── */
+section 
+{
+    padding: 80px 24px;
+}
+
+.center
+{
+    max-width: 900px;
+    padding: 80px 70px;
+}
+
+.section-title 
+{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 24px;
+    color: #5d2e0a;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.section-line 
+{
+    width: 80px;
+    height: 4px;
+    background: #b05e3c;
+    margin: 0 auto 48px;
+    border-radius: 2px;
+}
+
+/* ─── FEATURES ─── */
+.features 
+{
+    background: #e9c48a;
+}
+
+.cards 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card 
+{
+    background: #ffffff;
+    border: 3px solid #b05e3c;
+    border-radius: 15px;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.card:hover 
+{
+    transform: translateY(-8px);
+    border-color: #5d2e0a;
+}
+
+.card-icon 
+{
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.card h3 
+{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    color: #5d2e0a;
+    margin-bottom: 12px;
+}
+
+.card p 
+{
+    font-size: 14px;
+    line-height: 1.7;
+    color: #3e2a14;
+}
+
+/* ─── SCORES ─── */
+.scores-section 
+{
+    background: #5d2e0a;
+}
+
+.scores-table 
+{
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    border: 3px solid #b05e3c;
+}
+
+.scores-table th 
+{
+    background: #b05e3c;
+    color: #ffffff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    padding: 14px 20px;
+    text-align: left;
+}
+
+.scores-table td 
+{
+    padding: 12px 20px;
+    border-bottom: 1px solid #e9c48a;
+    font-weight: 700;
+    font-size: 15px;
+    background: #ffffff;
+    color: #3e2a14;
+}
+
+.scores-table tr:nth-child(even) td 
+{
+    background: #fdf5e6;
+}
+
+.scores-table tr:first-child td 
+{
+    color: #b05e3c;
+}
+
+.medal 
+{
+    margin-right: 8px;
+}
+
+/* ─── REGISTER ─── */
+.register 
+{
+    background: #e9c48a;
+}
+
+.form-box 
+{
+    max-width: 480px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 4px solid #b05e3c;
+    border-radius: 15px;
+    padding: 40px 32px;
+}
+
+.form-group 
+{
+    margin-bottom: 20px;
+}
+
+.form-group label 
+{
+    display: block;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    color: #5d2e0a;
+    margin-bottom: 8px;
+}
+
+.form-group input 
+{
+    width: 100%;
+    padding: 12px 16px;
+    background: #fdf5e6;
+    border: 2px solid #f4d092;
+    border-radius: 6px;
+    color: #3e2a14;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus 
+{
+    border-color: #b05e3c;
+}
+
+.avatar-preview 
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f4d092;
+    border: 3px solid #b05e3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+}
+
+.avatar-preview:hover 
+{
+    border-color: #5d2e0a;
+}
+
+/* ─── FOOTER ─── */
+footer 
+{
+    background: #5d2e0a;
+    border-top: 5px solid #b05e3c;
+    text-align: center;
+    padding: 32px 24px;
+}
+
+footer p 
+{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    color: #f4d092;
+    line-height: 2.2;
+}
+
+footer span 
+{
+    color: #ffaa00;
+}
+
+/* ─── FLOATING COINS ─── */
+.coin 
+{
+    position: fixed;
+    pointer-events: none;
+    font-size: 28px;
+    animation: coinFloat 1s ease-out forwards;
+    z-index: 200;
+}
+
+@keyframes coinFloat 
+{
+    0% 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% 
+    {
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+}
+
+/* ─── SCROLL REVEAL ─── */
+.reveal 
+{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .6s, transform .6s;
+}
+
+.reveal.visible 
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE NAV ─── */
+@media (max-width: 600px) 
+{
+    .nav-links 
+    {
+        display: none;
+    }
+}
